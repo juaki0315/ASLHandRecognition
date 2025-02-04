@@ -2,13 +2,16 @@ import cv2
 import mediapipe as mp
 import numpy as np
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Initialize MediaPipe Hands
 mp_hands = mp.solutions.hands
 hands = mp_hands.Hands(static_image_mode=True, max_num_hands=1, min_detection_confidence=0.5)
 
-DATASET_PATH = "C:/Users/juaki/OneDrive/Escritorio/ASLHandRecognition/asl_dataset_raw"
-OUTPUT_PATH = "C:/Users/juaki/OneDrive/Escritorio/ASLHandRecognition/asl_dataset_keypoints"
+DATASET_PATH = os.getenv("DATASET_PATH")
+OUTPUT_PATH = os.getenv("OUTPUT_PATH")
 
 if not os.path.exists(OUTPUT_PATH):
     os.makedirs(OUTPUT_PATH)
