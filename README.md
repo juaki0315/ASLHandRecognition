@@ -1,9 +1,8 @@
 # **ASL Finger Spelling Recognition using YOLO and Deep Learning**
 
-This project focuses on translating American Sign Language (ASL) finger spelling into text using deep learning and YOLO-based object detection. The system detects hand keypoints from video frames, extracts features, and classifies each frame into corresponding letters of the alphabet.
+This project focuses on translating American Sign Language (ASL) finger spelling into text. The system detects hand keypoints from video frames, extracts features, and classifies each frame into corresponding letters of the alphabet.
 
 ## **🚀 Features**  
-✅ Uses **YOLO** for real-time hand detection.  
 ✅ Extracts **21 keypoints** per frame using **MediaPipe**.  
 ✅ Trains a **Neural Network (MLP)** to classify letters from keypoints.  
 ✅ Automatically saves the best model during training.  
